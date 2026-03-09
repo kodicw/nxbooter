@@ -7,10 +7,11 @@
 
   outputs =
     {
-      self,
+      nixpkgs,
     }:
     {
       lib = import ./lib/lib.nix { };
       nixosModules.default = import ./modules/nxbooter;
     };
 }
+
