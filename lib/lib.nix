@@ -10,7 +10,7 @@
     in
     pkgs.writeShellScriptBin "run-pixiecore" ''
       exec ${pkgs.pixiecore}/bin/pixiecore \
-        boot ${build.kernel}/bzImage ${build.initialRamdisk}/initrd \
+        boot ${build.kernel}/bzImage ${build.netbootRamdisk}/initrd \
         --cmdline "init=${build.toplevel}/init loglevel=4" \
         --debug \
         --port 64172 --status-port 64172 "$@"
