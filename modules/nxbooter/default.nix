@@ -41,7 +41,7 @@ in
     })
 
     (mkIf cfg.openFirewall {
-      networking.firewall.allowedTCPPorts = [ 80 ];
+      networking.firewall.allowedTCPPorts = [ 64172 ];
       networking.firewall.allowedUDPPorts = [
         67
         69

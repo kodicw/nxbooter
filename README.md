@@ -6,7 +6,7 @@ A simple NixOS module and library for netbooting a NixOS system using `pixiecore
 
 `nxbooter` provides a NixOS module that configures a systemd service to run `pixiecore`. This allows you to easily netboot a NixOS system over the network.
 
-The module uses the system's built kernel and initrd to serve them via `pixiecore` on port 64172.
+The module uses the system's built kernel and initrd to serve them via `pixiecore` on port 64172 with ProxyDHCP enabled by default.
 
 ## Module Usage
 

@@ -13,13 +13,14 @@
         boot ${build.kernel}/bzImage ${build.netbootRamdisk}/initrd \
         --cmdline "init=${build.toplevel}/init loglevel=4" \
         --debug \
+        --dhcp-no-bind \
         --port 64172 --status-port 64172 "$@"
     '';
   buildBtrfsRaid =
     {
       mainDisk,
       extraDisks,
-      raidLevel,
+      raidLevel ? "raid1",
     }:
     {
       disko.devices = {
